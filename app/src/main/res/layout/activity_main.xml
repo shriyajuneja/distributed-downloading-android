@@ -16,18 +16,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <EditText
-        android:id="@+id/key"
+        android:id="@+id/num_of_requests"
         android:layout_below="@id/link"
-        android:hint="enter the unique key"
+        android:hint="enter the number of partitions you want: "
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/download"
-        android:text="download"
+        android:text="request"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/key"
+        android:layout_below="@+id/num_of_requests"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/activity_horizontal_margin" />
 </RelativeLayout>
