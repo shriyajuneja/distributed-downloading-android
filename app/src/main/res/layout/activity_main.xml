@@ -20,7 +20,8 @@
         android:layout_below="@id/link"
         android:hint="enter the number of partitions you want: "
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:inputType="number"/>
 
     <Button
         android:id="@+id/download"
