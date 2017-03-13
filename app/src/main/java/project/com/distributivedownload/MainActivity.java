@@ -18,6 +18,8 @@ import org.json.JSONObject;
 
 import java.util.Map;
 
+import project.com.distributivedownload.models.FirstRequest;
+
 public class MainActivity extends AppCompatActivity {
 
     private EditText url,numOfRequests;
@@ -60,7 +62,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void makeRequest(String url, int n) {
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, requestUrl, null, new Response.Listener<JSONObject>() {
+        FirstRequest firstRequest = new FirstRequest(url,n);
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, requestUrl,firstRequest, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
 
@@ -71,5 +74,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        AppController.getInstance().addToRequestQueue(jsonObjectRequest);
     }
 }
